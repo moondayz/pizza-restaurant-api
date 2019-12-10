@@ -8,13 +8,20 @@ namespace WebApplication1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
+
     public class ValuesController : ControllerBase
     {
+        [HttpGet("{sth}")]
+        public IActionResult GetSth()
+        {
+            return Ok("!");
+        }
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "value1" };
         }
 
         // GET api/values/5
